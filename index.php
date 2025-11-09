@@ -49,6 +49,43 @@ function myFunc(){
 
 myFunc();
 
+echo "<br>";
+function myTest() {
+    static $x = 100;
+    echo $x;
+    $x++;
+}
+
+myTest();
+echo "<br>";
+myTest();
+echo "<br>";
+myTest();
+
+
+
+// object
+
+class Student {
+    public $name;
+    public $id;
+
+    public function __construct($name, $id) {
+        $this->name = $name;
+        $this->id = $id;
+    }
+
+    public function getName() {
+        return "The Student Id is  $this->id and his name is $this->name ";
+    }
+}
+
+
+$student1 = new Student("john", 409);
+
+echo "<br>";
+echo $student1->getName();
+
 ?>
 
 </body>
